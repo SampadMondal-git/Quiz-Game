@@ -29,7 +29,7 @@ This project is a simple, interactive quiz application built using HTML, CSS, an
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/yourusername/quiz-application.git
+   https://github.com/SampadMondal-git/Quiz-Game.git
    ```
 
 2. Open `index.html` in your web browser.
@@ -39,10 +39,6 @@ This project is a simple, interactive quiz application built using HTML, CSS, an
 - **HTML**: Provides the structure of the application.
 - **CSS**: Handles styling and layout.
 - **JavaScript**: Adds interactivity and dynamic behavior.
-
-## Demo
-
-![Quiz Application Screenshot](https://via.placeholder.com/800x400)
 
 ## Contribution
 
