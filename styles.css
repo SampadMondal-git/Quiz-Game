@@ -25,7 +25,7 @@ h1 {
     margin-bottom: 20px;
     font-size: 36px;
     font-family: "Kanit", sans-serif;
-    font-weight: 300;
+    font-weight: 500;
     background-color: bisque;
     color: black;
     border: 2px solid black;
@@ -61,7 +61,7 @@ p {
     text-align: center;
     padding: 20px;
     font-family: "Poppins", sans-serif;
-    font-weight: 400;
+    font-weight: 450;
 }
 
 .btn {
@@ -69,6 +69,7 @@ p {
     color: black;
     border: 2px solid black;
     font-size: 16px;
+    font-weight: 500;
     font-family: "Poppins", sans-serif;
     text-align: center;
     padding: 20px;
