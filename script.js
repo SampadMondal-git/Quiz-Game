@@ -1,10 +1,19 @@
+function selectOption(selectedElement) {
+    const options = document.querySelectorAll('.option');
+    options.forEach(option => {
+        option.classList.remove('selected');
+    });
+
+    selectedElement.classList.add('selected');
+}
+
 const levels = [
     {
         level: 1,
         question: {
             text: "Which HTML tag is used to define the most important heading on a page?",
             options: ["h1", "h6", "head", "title"],
-            correctAnswer: "<h1>",
+            correctAnswer: "h1",
         },
     },
     {
@@ -50,9 +59,9 @@ const levels = [
     {
         level: 7,
         question: {
-            text: "Which JavaScript keyword is used to declare a variable?",
-            options: ["var", "let", "const", "int"],
-            correctAnswer: "var",
+            text: "Which JavaScript keyword is used to declare a letiable?",
+            options: ["let", "let", "const", "int"],
+            correctAnswer: "let",
         },
     },
     {
@@ -84,3 +93,23 @@ document.getElementById("option2").innerHTML = levels[0].question.options[1];
 document.getElementById("option3").innerHTML = levels[0].question.options[2];
 
 document.getElementById("option4").innerHTML = levels[0].question.options[3];
+
+function answerCheck() {
+    let optionId = document.querySelector('.selected').id;
+    let optionValue = document.getElementById(optionId).innerHTML;
+
+    if (optionValue === levels[0].question.correctAnswer) {
+        document.getElementById("result").innerHTML = "Correct Answer!";
+
+        document.getElementById("next").disabled = false;
+        document.querySelector("#next").style.opacity = "1";
+        document.querySelector("#next").style.cursor = "pointer";
+    } else {
+        document.getElementById("result").innerHTML = "Incorrect Answer!";
+        document.querySelector("#result").style.color = "red";
+
+        setTimeout(() => {
+            window.location.reload();
+        }, 1000);
+    }
+}
