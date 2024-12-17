@@ -113,18 +113,12 @@ p {
     background-color: rgb(0, 200, 0);
     color: white;
     border: 2px solid black;
+    cursor: not-allowed;
     opacity: 0.5;
     &:hover {
         background-color: rgb(0, 160, 0);
         transition: 0.3s ease;
     }
-}
-
-button[disabled] {
-    border: 2px solid black;
-    background-color: grey;
-    color: white;
-    cursor: not-allowed;
 }
 
 #result {
