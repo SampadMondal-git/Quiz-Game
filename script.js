@@ -138,7 +138,7 @@ function nextLevel() {
 
         console.log("You're in the next level!");
 
-        document.getElementById("level").innerHTML = "LEVEL " +levels[currentLevel].level;
+        document.getElementById("level").innerHTML = "LEVEL " + levels[currentLevel].level;
 
         document.getElementById("questions").innerHTML = levels[currentLevel].question.text;
 
@@ -157,10 +157,15 @@ function nextLevel() {
         document.querySelector("#next").style.opacity = "0.5";
 
         const options = document.querySelectorAll(".option");
-                options.forEach(option => {
-                    option.classList.remove("selected");
-                });
+        options.forEach(option => {
+            option.classList.remove("selected");
+        });
     } else {
-prompt("You've aced every level! This is just the beginning. Let's keep coding, learning, and building amazing things.");
+        document.querySelector("#next").innerHTML = "DONE!";
+        document.querySelector("#next").style.backgroundColor = "rgb(0, 255, 0)";
+        document.getElementById("next").addEventListener("click", function () {
+            prompt("You've aced every level! This is just the beginning. Let's keep coding, learning, and building amazing things.");
+            location.reload();
+        })
     };
 };
