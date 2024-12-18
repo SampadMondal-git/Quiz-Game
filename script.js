@@ -20,8 +20,8 @@ const levels = [
         level: 2,
         question: {
             text: "What is the correct HTML tag for inserting a line break?",
-            options: ["<br>", "<lb>", "<break>", "<newline>"],
-            correctAnswer: "<br>",
+            options: ["br", "lb", "break", "newline"],
+            correctAnswer: "br",
         },
     },
     {
@@ -94,22 +94,73 @@ document.getElementById("option3").innerHTML = levels[0].question.options[2];
 
 document.getElementById("option4").innerHTML = levels[0].question.options[3];
 
+let currentLevel = 0;
+
 function answerCheck() {
-    let optionId = document.querySelector('.selected').id;
-    let optionValue = document.getElementById(optionId).innerHTML;
 
-    if (optionValue === levels[0].question.correctAnswer) {
-        document.getElementById("result").innerHTML = "Correct Answer!";
+    let selectedElement = document.querySelector('.selected');
 
-        document.getElementById("next").disabled = false;
-        document.querySelector("#next").style.opacity = "1";
-        document.querySelector("#next").style.cursor = "pointer";
+    if (selectedElement === null) {
+        alert("Please select an option");
     } else {
-        document.getElementById("result").innerHTML = "Incorrect Answer!";
-        document.querySelector("#result").style.color = "red";
+        let optionId = document.querySelector('.selected').id;
+        let optionValue = document.getElementById(optionId).innerHTML;
 
-        setTimeout(() => {
-            window.location.reload();
-        }, 1000);
+        if (optionValue === levels[currentLevel].question.correctAnswer) {
+            document.getElementById("next").disabled = false;
+            document.getElementById("next").style.cursor = "pointer";
+            document.querySelector("#next").style.opacity = "1";
+            document.querySelector(".selected").style.backgroundColor = "rgb(0, 255, 0)";
+            document.querySelector(".selected").style.color = "black";
+            document.querySelector(".selected").style.transition = "none";
+        } else {
+            document.querySelector(".selected").style.backgroundColor = "red";
+            document.querySelector(".selected").style.color = "white";
+            document.querySelector(".selected").style.transition = "none";
+            document.getElementById("next").disabled = true;
+            document.querySelector("#next").style.opacity = "0.5";
+
+            setTimeout(() => {
+                document.querySelector(".selected").style.backgroundColor = "";
+                document.querySelector(".selected").style.color = "";
+                const options = document.querySelectorAll(".option");
+                options.forEach(option => {
+                    option.classList.remove("selected");
+                });
+            }, 1500);
+        }
     }
-}
+};
+
+function nextLevel() {
+    if (currentLevel < levels.length - 1) {
+        currentLevel++;
+
+        console.log("You're in the next level!");
+
+        document.getElementById("level").innerHTML = "LEVEL " +levels[currentLevel].level;
+
+        document.getElementById("questions").innerHTML = levels[currentLevel].question.text;
+
+        document.getElementById("option1").innerHTML = levels[currentLevel].question.options[0];
+
+        document.getElementById("option2").innerHTML = levels[currentLevel].question.options[1];
+
+        document.getElementById("option3").innerHTML = levels[currentLevel].question.options[2];
+
+        document.getElementById("option4").innerHTML = levels[currentLevel].question.options[3];
+
+        document.querySelector(".selected").style.backgroundColor = "";
+        document.getElementById("next").style.cursor = "";
+        document.querySelector(".selected").style.color = "";
+        document.getElementById("next").disabled = true;
+        document.querySelector("#next").style.opacity = "0.5";
+
+        const options = document.querySelectorAll(".option");
+                options.forEach(option => {
+                    option.classList.remove("selected");
+                });
+    } else {
+prompt("You've aced every level! This is just the beginning. Let's keep coding, learning, and building amazing things.");
+    };
+};
