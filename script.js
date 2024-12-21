@@ -164,7 +164,7 @@ function nextLevel() {
         document.querySelector("#next").innerHTML = "DONE!";
         document.querySelector("#next").style.backgroundColor = "rgb(0, 255, 0)";
         document.getElementById("next").addEventListener("click", function () {
-            alert("You've aced every level! This is just the beginning. Let's keep coding, learning, and building amazing things.");
+            prompt("You've aced every level! This is just the beginning. Let's keep coding, learning, and building amazing things.");
             location.reload();
         })
     };
