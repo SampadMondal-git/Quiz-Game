@@ -1,0 +1,122 @@
+[
+    {
+        "level": 1,
+        "question": {
+            "text": "Which HTML tag is used to define the most important heading on a page?",
+            "options": ["h1", "h6", "head", "title"],
+            "correctAnswer": "h1"
+        }
+    },
+    {
+        "level": 2,
+        "question": {
+            "text": "What is the correct HTML tag for inserting a line break?",
+            "options": ["br", "lb", "break", "newline"],
+            "correctAnswer": "br"
+        }
+    },
+    {
+        "level": 3,
+        "question": {
+            "text": "Which HTML attribute specifies a unique ID for an HTML element?",
+            "options": ["class", "style", "id", "name"],
+            "correctAnswer": "id"
+        }
+    },
+    {
+        "level": 4,
+        "question": {
+            "text": "Which CSS property is used to change the text color of an element?",
+            "options": ["color", "text-color", "font-color", "bgcolor"],
+            "correctAnswer": "color"
+        }
+    },
+    {
+        "level": 5,
+        "question": {
+            "text": "What is the correct CSS syntax for applying a style to an element with the ID \"myDiv\"?",
+            "options": ["#myDiv { ... }", ".myDiv { ... }", "myDiv { ... }", "*myDiv* { ... }"],
+            "correctAnswer": "#myDiv { ... }"
+        }
+    },
+    {
+        "level": 6,
+        "question": {
+            "text": "Which CSS property is used to set the background color of an element?",
+            "options": ["background-color", "bg-color", "color-background", "bgcolor"],
+            "correctAnswer": "background-color"
+        }
+    },
+    {
+        "level": 7,
+        "question": {
+            "text": "Which JavaScript keyword is used to declare a variable?",
+            "options": ["var", "let", "const", "int"],
+            "correctAnswer": "let"
+        }
+    },
+    {
+        "level": 8,
+        "question": {
+            "text": "What is the result of the following JavaScript expression: `5 + \"5\"`?",
+            "options": ["10", "\"55\"", "\"10\"", "An error"],
+            "correctAnswer": "\"55\""
+        }
+    },
+    {
+        "level": 9,
+        "question": {
+            "text": "Which JavaScript function is used to display a message box on the screen?",
+            "options": ["alert()", "console.log()", "prompt()", "confirm()"],
+            "correctAnswer": "alert()"
+        }
+    },
+    {
+        "level": 10,
+        "question": {
+            "text": "What is the purpose of the 'async' keyword in JavaScript?",
+            "options": ["To make a function run faster", "To indicate that a function returns a Promise", "To prevent function execution", "To create a loop"],
+            "correctAnswer": "To indicate that a function returns a Promise"
+        }
+    },
+    {
+        "level": 11,
+        "question": {
+            "text": "Which CSS display property value creates a grid container?",
+            "options": ["grid", "flex", "block", "inline-grid"],
+            "correctAnswer": "grid"
+        }
+    },
+    {
+        "level": 12,
+        "question": {
+            "text": "What does the 'localStorage' object in JavaScript allow you to do?",
+            "options": ["Store data temporarily", "Store data permanently in the browser", "Store data in a database", "Store data in cookies"],
+            "correctAnswer": "Store data permanently in the browser"
+        }
+    },
+    {
+        "level": 13,
+        "question": {
+            "text": "Which HTML5 tag is used to play video files?",
+            "options": ["video", "media", "player", "movie"],
+            "correctAnswer": "video"
+        }
+    },
+    {
+        "level": 14,
+        "question": {
+            "text": "What is the purpose of the CSS 'flexbox' layout model?",
+            "options": ["To create responsive grids", "To align and distribute space among items", "To animate elements", "To style text"],
+            "correctAnswer": "To align and distribute space among items"
+        }
+    },
+    {
+        "level": 15,
+        "question": {
+            "text": "What is the purpose of the JavaScript 'fetch' API?",
+            "options": ["To make HTTP requests", "To fetch local files", "To download images", "To load JavaScript modules"],
+            "correctAnswer": "To make HTTP requests"
+        }
+    }
+]

@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Game</title>
+    <title>Advanced Quiz Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
     <div class="container">
-        <h1 id="level">LEVEL</h1>
+        <div class="header">
+            <h1 id="level">LEVEL</h1>
+            <div class="score-progress">
+                <p id="score">Score: 0</p>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+            </div>
+        </div>
         <div class="object">
             <div class="questions">
                 <p id="questions"></p>
@@ -27,14 +33,22 @@
             </div>
             <div class="button">
                 <button id="submit" class="btn" onclick="answerCheck()">SUBMIT</button>
-                <button id="next" class="btn" disabled onclick="nextLevel(answerCheck())">NEXT</button>
+                <button id="next" class="btn" disabled onclick="nextLevel()">NEXT</button>
             </div>
         </div>
     </div>
+    
+    <div id="endModal" class="modal">
+        <div class="modal-content">
+            <h2>Quiz Completed! 🎉</h2>
+            <p>Your final score is <span id="finalScore">0</span></p>
+            <button class="btn" onclick="restartQuiz()">Play Again</button>
+        </div>
+    </div>
+
     <footer>
-        <p id="copyright">&copy; Designed by <a href="https://www.instagram.com/_ursfav.sxmy/">Samy</a></p>
+        <p id="copyright">&copy; Designed by <a href="https://www.instagram.com/samx4sure/">Samy</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
-
 </html>
